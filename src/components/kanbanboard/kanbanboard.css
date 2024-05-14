@@ -1,10 +1,14 @@
+.test {
+  height: 100%;
+}
+
 .kanban-board {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 20px;
   background-color: #d2eaff;
-  height: calc(100% - 40px);
+  height: calc(100% - 120px);
 }
 
 .kanban-column {
