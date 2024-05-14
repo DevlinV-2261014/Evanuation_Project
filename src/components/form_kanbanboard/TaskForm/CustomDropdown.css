@@ -1,0 +1,25 @@
+.dropdown {
+    border-radius: 7px;
+    width: 80%;
+    align-self: center;
+    margin: 5px;
+    background-color: white;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.dropdownOption {
+    background-color: #dee3df;
+    color: black;
+    font-size: 15px;
+    margin-top: 2px;
+    padding: 5px 10px;
+    border: #1a1a1a 1px solid;
+    border-radius: 5px;
+}
+
+.dropdownOption:hover {
+    background-color: #3a3a3a;
+    color: white;
+    cursor: pointer;
+}

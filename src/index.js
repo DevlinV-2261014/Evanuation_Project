@@ -6,17 +6,35 @@ import KanbanBoard from './components/kanbanboard/kanbanboard';
 import Nav from './components/Nav/Nav';
 import ClickingKanbanBoard from './components/clicking_kanbanboard/clicking_kanbanboard';
 import DndKanbanBoard from './components/dnd_kanbanboard/dnd_kanbanboard';
+import FormKanbanBoard from './components/form_kanbanboard/FormKanbanBoard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
     <Router>
-      <Nav />
+      {/* <Nav /> */}
       <Routes>
-        <Route path="/kanbanboard" element={<KanbanBoard />} />
-        <Route path="/clicking_kanbanboard" element={<ClickingKanbanBoard />} />
-        <Route path="/dnd_kanbanboard" element={<DndKanbanBoard />} />
-        <Route path="/" element={<Navigate to="/kanbanboard" />} />
+        <Route path="/" element={<Navigate to="/clicking_kanbanboard" />} />
+
+        <Route path="/clicking_kanbanboard" element={
+          <div className="full">
+          <Nav haveTaskForm={false} />
+          <ClickingKanbanBoard />
+        </div>
+        } />
+        <Route path="/dnd_kanbanboard" element={
+          <div className="full">
+            <Nav haveTaskForm={false} />
+          <DndKanbanBoard />
+        </div>
+        } />
+        
+        <Route path="/form_kanbanboard" element={
+        <div className="full">
+          <Nav haveTaskForm={true}/>
+          <FormKanbanBoard />
+        </div>
+        } />
       </Routes>
     </Router>
   </>

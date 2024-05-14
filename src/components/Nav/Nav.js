@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from '../../logo.svg';
 import "./Nav.css";
-import TaskForm from '../TaskForm/TaskForm';
+import TaskForm from '../form_kanbanboard/TaskForm/TaskForm'
 
-function Nav() {
+function Nav({haveTaskForm = false}) {
     return (
         <nav className="navbar">
             <div className="navbar-left">
@@ -20,9 +20,11 @@ function Nav() {
                 <li>
                     <a href="/">Contact</a>
                 </li>
+                {haveTaskForm &&
                 <li>
                     <TaskForm />
                 </li>
+                }
             </ul>
         </nav>
     );
