@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import KanbanBoard from './components/kanbanboard/kanbanboard';
 import Nav from './components/Nav/Nav';
@@ -8,8 +9,12 @@ import ClickingKanbanBoard from './components/clicking_kanbanboard/clicking_kanb
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Nav />
-    <KanbanBoard />
-    <ClickingKanbanBoard />
+    <Router>
+      <Nav />
+      <Routes>
+        <Route path="/kanbanboard" element={<KanbanBoard />} />
+        <Route path="/clicking_kanbanboard" element={<ClickingKanbanBoard />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
