@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Nav from '../Nav/Nav';
 import './FormKanbanBoard.css';
 
 const initialTasks = {
@@ -11,7 +12,15 @@ const initialTasks = {
 const FormKanbanBoard = () => {
   const [tasks, setTasks] = useState(initialTasks);
 
+  const addTask = (column, title, description) => {
+    const newTask = { title, description };
+    setTasks({ ...tasks, [column]: [...tasks[column], newTask] });
+};
+
+
   return (
+    <>
+    <Nav haveTaskForm={true} addTask={addTask} />
     <div className="kanban-board">
       {Object.entries(tasks).map(([column, tasks], index) => (
         <div key={index} className="kanban-column">
@@ -27,6 +36,7 @@ const FormKanbanBoard = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 

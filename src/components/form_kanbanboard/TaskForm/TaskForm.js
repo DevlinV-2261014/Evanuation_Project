@@ -4,7 +4,7 @@ import CustomDropdown from './CustomDropdown';
 import { useState } from 'react';
 import './TaskForm.css';
 
-const TaskForm = () => {
+const TaskForm = ({addTask}) => {
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
@@ -16,6 +16,7 @@ const TaskForm = () => {
 
     function handleSubmit(close) {
         console.log('Title: ' + title + '\nDescription: ' + description + '\nStatus: ' + status);
+        addTask(status, description, title);
         close();
     }
 
