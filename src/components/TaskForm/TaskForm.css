@@ -1,0 +1,96 @@
+.addTaskFormButton {
+    border-radius: 10px;
+    background-color: #7ed1ff;
+    border-width: 1px;
+    padding: 2px 20px;
+    color: white;
+    font-size: 24px;
+}
+
+.addTaskFormButton:hover {
+    background-color: #6cb8e6;
+    cursor: pointer;
+}
+
+.modal {
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.header {
+    font-size: large;
+    font-weight: bold;
+}
+
+.titleInput {
+    border-radius: 7px;
+    width: 80%;
+    align-self: center;
+    margin: 5px;
+}
+
+.descriptionInput {
+    border-radius: 7px;
+    width: 80%;
+    align-self: center;
+    margin: 5px;
+    height: 40px;
+    word-break: break-word;
+}
+
+.inputLabel, .header, .dropdown {
+    width: 80%;
+    margin-left: 15px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+}
+
+.submitButton {
+    background-color: #3a3a3a;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+.submitButton:hover {
+    background-color: #1a1a1a;
+    cursor: pointer;
+}
+
+.dropdown {
+    border-radius: 7px;
+    width: 80%;
+    align-self: center;
+    margin: 5px;
+    background-color: white;
+    text-align: center;
+}
+
+.dropdownOption {
+    background-color: #dee3df;
+    color: black;
+    font-size: 15px;
+    margin-top: 2px;
+    padding: 5px 10px;
+    border: #1a1a1a 1px solid;
+    border-radius: 5px;
+}
+
+.dropdownOption:hover {
+    background-color: #3a3a3a;
+    color: white;
+    cursor: pointer;
+}

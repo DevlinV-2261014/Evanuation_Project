@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../logo.svg';
 import "./Nav.css";
+import TaskForm from '../TaskForm/TaskForm';
 
 function Nav() {
     return (
@@ -18,6 +19,9 @@ function Nav() {
                 </li>
                 <li>
                     <a href="/">Contact</a>
+                </li>
+                <li>
+                    <TaskForm />
                 </li>
             </ul>
         </nav>
