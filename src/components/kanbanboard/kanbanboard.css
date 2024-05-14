@@ -1,7 +1,3 @@
-.test {
-  height: 100%;
-}
-
 .kanban-board {
   display: flex;
   flex-direction: row;
