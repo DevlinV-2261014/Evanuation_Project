@@ -1,4 +1,4 @@
-.kanban-board {
+.formkanban-board {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -7,7 +7,7 @@
     height: calc(100% - 120px);
   }
   
-  .kanban-column {
+  .formkanban-column {
     flex: 1;
     margin: 15px;
     padding: 20px;
@@ -16,17 +16,17 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-  .kanban-column h2 {
+  .formkanban-column h2 {
     margin-bottom: 20px;
   }
   
-  .kanban-cards {
+  .formkanban-cards {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
   
-  .kanban-card {
+  .formkanban-card {
     padding: 10px;
     margin-bottom: 10px;
     background-color: #ffffff;
@@ -34,11 +34,11 @@
     border-radius: 10px;
   }
   
-  .kanban-card h3 {
+  .formkanban-card h3 {
     margin: 0;
     margin-bottom: 5px;
   }
   
-  .kanban-card p {
+  .formkanban-card p {
     margin: 0;
   }

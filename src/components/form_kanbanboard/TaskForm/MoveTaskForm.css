@@ -8,6 +8,7 @@
 
 .formCardDiv:hover {
     background-color: #dee3df;
+    cursor: pointer;
 }
 
 .movemodal {

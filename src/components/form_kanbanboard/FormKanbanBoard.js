@@ -30,11 +30,11 @@ const moveTask = (task, target) => {
   return (
     <>
     <Nav haveTaskForm={true} addTask={addTask} />
-    <div className="kanban-board">
+    <div className="formkanban-board">
       {Object.entries(tasks).map(([column, tasks], index) => (
-        <div key={index} className="kanban-column">
+        <div key={index} className="formkanban-column">
           <h2>{column}</h2>
-          <div className="kanban-cards">
+          <div className="formkanban-cards">
             {tasks.map((task, index) => (
               <MoveTaskForm key={index} task={task} moveTask={moveTask} />
             ))}
