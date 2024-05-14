@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './index.css';
 import KanbanBoard from './components/kanbanboard/kanbanboard';
 import Nav from './components/Nav/Nav';
@@ -14,6 +14,7 @@ root.render(
       <Routes>
         <Route path="/kanbanboard" element={<KanbanBoard />} />
         <Route path="/clicking_kanbanboard" element={<ClickingKanbanBoard />} />
+        <Route path="/" element={<Navigate to="/kanbanboard" />} />
       </Routes>
     </Router>
   </React.StrictMode>
