@@ -1,0 +1,83 @@
+.formCardDiv {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+}
+
+.formCardDiv:hover {
+    background-color: #dee3df;
+}
+
+.movemodal {
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.movetitle {
+ height: 50%;
+}
+
+.movedescription {
+ height: 50%;
+}
+
+.moveTaskFormButton {
+    margin: 0px;
+    background-color: transparent;
+    border: none;
+}
+
+.movecontent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.moveheader {
+    font-size: large;
+    font-weight: bold;
+}
+
+.movetitleInput {
+    border-radius: 7px;
+    width: 80%;
+    align-self: center;
+    margin: 5px;
+}
+
+.movedescriptionInput {
+    border-radius: 7px;
+    width: 80%;
+    align-self: center;
+    margin: 5px;
+    height: 40px;
+    word-break: break-word;
+}
+
+.moveinputLabel, .moveheader, .movedropdown {
+    width: 80%;
+    margin-left: 15px;
+}
+
+.moveactions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+}
+
+.movesubmitButton {
+    background-color: #3a3a3a;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+.movesubmitButton:hover {
+    background-color: #1a1a1a;
+    cursor: pointer;
+}

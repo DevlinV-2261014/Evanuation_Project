@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MoveTaskForm from './TaskForm/MoveTaskForm';
 import Nav from '../Nav/Nav';
 import './FormKanbanBoard.css';
 
@@ -17,6 +18,14 @@ const FormKanbanBoard = () => {
     setTasks({ ...tasks, [column]: [...tasks[column], newTask] });
 };
 
+const moveTask = (task, target) => {
+  const newTasks = { ...tasks };
+  for (const column in newTasks) {
+    newTasks[column] = newTasks[column].filter((t) => t !== task);
+  }
+  newTasks[target] = [...newTasks[target], task];
+  setTasks(newTasks);
+} 
 
   return (
     <>
@@ -27,10 +36,7 @@ const FormKanbanBoard = () => {
           <h2>{column}</h2>
           <div className="kanban-cards">
             {tasks.map((task, index) => (
-              <div key={index} className="kanban-card">
-                <h3>{task.title}</h3>
-                <p>{task.description}</p>
-              </div>
+              <MoveTaskForm key={index} task={task} moveTask={moveTask} />
             ))}
           </div>
         </div>
