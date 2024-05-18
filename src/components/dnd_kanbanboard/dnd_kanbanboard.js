@@ -71,6 +71,34 @@ const DndKanbanBoard = () => {
         setState(newState);
     }
 
+    const addTask = () => {
+        const newTaskId = `task-${Object.keys(state.tasks).length + 1}`;
+        const newTask = {
+            id: newTaskId,
+            title: `Task ${Object.keys(state.tasks).length + 1}`,
+            description: `Description ${Object.keys(state.tasks).length + 1}`
+        };
+
+        const updatedTasks = {
+            ...state.tasks,
+            [newTaskId]: newTask
+        };
+
+        const updatedColumns = {
+            ...state.columns,
+            'column-1': {
+                ...state.columns['column-1'],
+                taskIds: [...state.columns['column-1'].taskIds, newTaskId]
+            }
+        };
+
+        setState({
+            ...state,
+            tasks: updatedTasks,
+            columns: updatedColumns
+        });
+    };
+
     return (
         <DragDropContext onDragEnd={onDragEnd}>
             <div className='kanban-board'>
@@ -78,7 +106,7 @@ const DndKanbanBoard = () => {
                     const column = state.columns[columnId];
                     const tasks = column.taskIds.map(taskId => state.tasks[taskId]);
 
-                    return <Column key={column.id} column={column} tasks={tasks} />;
+                    return <Column key={column.id} column={column} tasks={tasks} addTask={addTask} />;
                 })}
             </div>
         </DragDropContext>
