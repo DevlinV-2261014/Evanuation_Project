@@ -4,10 +4,9 @@ import CustomDropdown from './CustomDropdown';
 import { useState } from 'react';
 import './TaskForm.css';
 
-const TaskForm = ({addTask}) => {
-
-    const [title, setTitle] = useState('');
-    const [description, setDescription] = useState('');
+const TaskForm = ({addTask, nr}) => {
+    const [title, setTitle] = useState('Task ' + nr);
+    const [description, setDescription] = useState('Description ' + nr);
     const [status, setStatus] = useState('To Do');
 
     function handleSelect(option) {
@@ -35,10 +34,10 @@ const TaskForm = ({addTask}) => {
             <label className='header'> Add Task </label>
             <div className='content'>
                 <label className='inputLabel'>Title</label>
-                <input className='titleInput' type='text' placeholder='Title' onChange={e => setTitle(e.target.value)} />
+                <input className='titleInput' type='text' value={"Task " + nr} placeholder='Title' onChange={e => setTitle(e.target.value)} />
 
                 <label className='inputLabel'>Description</label>
-                <input className='descriptionInput' type='text' placeholder='Description' onChange={e => setDescription(e.target.value)} />
+                <input className='descriptionInput' type='text' value={"Description " + nr} placeholder='Description' onChange={e => setDescription(e.target.value)} />
 
                 <label className='inputLabel'>Status</label>
                 <CustomDropdown className='dropdown' options={dropDownOptions} onSelect={handleSelect} value={selectedItem} />

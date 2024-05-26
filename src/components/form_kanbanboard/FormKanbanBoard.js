@@ -12,10 +12,12 @@ const initialTasks = {
 
 const FormKanbanBoard = () => {
   const [tasks, setTasks] = useState(initialTasks);
+  const [nextId, setNextId] = useState(6);
 
   const addTask = (column, title, description) => {
     const newTask = { title, description };
     setTasks({ ...tasks, [column]: [...tasks[column], newTask] });
+    setNextId(nextId + 1);
 };
 
 const moveTask = (task, target) => {
@@ -29,7 +31,7 @@ const moveTask = (task, target) => {
 
   return (
     <>
-    <Nav haveTaskForm={true} addTask={addTask} />
+    <Nav haveTaskForm={true} addTask={addTask} nr={nextId} />
     <div className="formkanban-board">
       {Object.entries(tasks).map(([column, tasks], index) => (
         <div key={index} className="formkanban-column">

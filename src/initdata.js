@@ -4,6 +4,7 @@ const initialData = {
         'task-2': { id: 'task-2', title: 'Task 2', description: 'Description 2' },
         'task-3': { id: 'task-3', title: 'Task 3', description: 'Description 3' },
         'task-4': { id: 'task-4', title: 'Task 4', description: 'Description 4' },
+        'task-5': { id: 'task-5', title: 'Task 5', description: 'Description 5' },
     },
     columns: {
         'column-1': {
@@ -24,7 +25,7 @@ const initialData = {
         'column-4': {
             id: 'column-4',
             title: 'Feedback',
-            taskIds: [],
+            taskIds: ['task-5'],
         },
         'column-5': {
             id: 'column-5',

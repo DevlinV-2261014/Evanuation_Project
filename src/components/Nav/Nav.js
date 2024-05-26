@@ -3,7 +3,7 @@ import logo from '../../logo.svg';
 import "./Nav.css";
 import TaskForm from '../form_kanbanboard/TaskForm/TaskForm'
 
-function Nav({haveTaskForm, addTask}) {
+function Nav({haveTaskForm, addTask, nr}) {
     return (
         <nav className="navbar">
             <div className="navbar-left">
@@ -22,7 +22,7 @@ function Nav({haveTaskForm, addTask}) {
                 </li>
                 {haveTaskForm &&
                 <li>
-                    <TaskForm addTask={addTask} />
+                    <TaskForm addTask={addTask} nr={nr} />
                 </li>
                 }
             </ul>
